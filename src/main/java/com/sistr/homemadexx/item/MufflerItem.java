@@ -7,6 +7,7 @@ import net.minecraft.item.ItemStack;
 
 import javax.annotation.Nullable;
 
+//todo 防御力、右クリック時の挙動、その他ArmorItemにある機能全て
 public class MufflerItem extends Item {
 
     public MufflerItem() {

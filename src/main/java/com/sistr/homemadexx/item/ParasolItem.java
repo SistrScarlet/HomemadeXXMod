@@ -10,6 +10,8 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 
+import javax.annotation.Nullable;
+
 public class ParasolItem extends ShieldItem {
 
     public ParasolItem() {
@@ -43,5 +45,10 @@ public class ParasolItem extends ShieldItem {
                 entityIn.setMotion(vec);
             }
         }
+    }
+
+    @Override
+    public boolean isShield(ItemStack stack, @Nullable LivingEntity entity) {
+        return true;
     }
 }
