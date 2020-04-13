@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "parasolmod:items/parasol_2d_blocking"
+  }
+}

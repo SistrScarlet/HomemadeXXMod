@@ -1,0 +1,10 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "parasolmod:items/parasol_2d"
+  },
+  "overrides": [
+    {"predicate": {"blocking": 1},"model": "parasolmod:item/parasol_item_2d_blocking"},
+    {"predicate": {"folding": 1},"model": "parasolmod:item/parasol_item_2d_folding"}
+  ]
+}
