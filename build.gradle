@@ -74,7 +74,8 @@ minecraft {
             // Recommended logging level for the console
             property 'forge.logging.console.level', 'debug'
 
-            args '--mod', 'examplemod', '--all', '--output', file('src/generated/resources/')
+            //データジェネレーターを新たに使う際は、ココに「, '--existing', file('src/main/resources')」を追加して、一旦genIntellijRunsしないとダメ
+            args '--mod', 'homemadexx', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources')
 
             mods {
                 examplemod {

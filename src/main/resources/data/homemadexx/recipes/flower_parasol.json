@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "WWI",
+    " RW",
+    "R W"
+  ],
+  "key": {
+    "R": {
+      "tag": "forge:rods/wooden"
+    },
+    "I": {
+      "tag": "forge:nuggets/iron"
+    },
+    "W": {
+      "tag": "minecraft:wool"
+    }
+  },
+  "result": {
+    "item": "homemadexx:flower_parasol"
+  }
+}
