@@ -12,7 +12,7 @@ public class MufflerItem extends Item {
 
     public MufflerItem() {
         super(new Item.Properties()
-                .maxDamage(0)
+                .maxStackSize(1)
                 .group(ModSetup.ITEM_GROUP));
     }
 

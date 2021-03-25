@@ -2,5 +2,9 @@
   "item.homemadexx.muffler": "Muffler",
   "item.homemadexx.flower_parasol": "Flower Parasol",
 
-  "itemGroup.homemadeXX": "Homemade XX"
+  "itemGroup.homemadeXX": "Homemade XX",
+
+
+  "attribute.name.generic.reachDistance": "Attack Reach"
+
 }

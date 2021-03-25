@@ -26,7 +26,8 @@ public class MufflerLayer<T extends LivingEntity, M extends EntityModel<T>> exte
         super(entityRendererIn);
     }
 
-    public void render(MatrixStack matrixStackIn, IRenderTypeBuffer bufferIn, int packedLightIn, T entitylivingbaseIn, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
+    public void render(MatrixStack matrixStackIn, IRenderTypeBuffer bufferIn, int packedLightIn, T entitylivingbaseIn,
+                       float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
         ItemStack itemstack = entitylivingbaseIn.getItemStackFromSlot(EquipmentSlotType.HEAD);
         if (itemstack.getItem() == Registration.MUFFLER_ITEM.get()) {
             ResourceLocation resourcelocation;
@@ -34,13 +35,15 @@ public class MufflerLayer<T extends LivingEntity, M extends EntityModel<T>> exte
             resourcelocation = MUFFLER_TEXTURE;
 
             matrixStackIn.push();
-            if (entitylivingbaseIn.isShiftKeyDown()) {
+            if (entitylivingbaseIn.isSneaking()) {
                 matrixStackIn.translate(0, 0.25, 0);
             }
             this.getEntityModel().copyModelAttributesTo(this.mufflerModel);
             this.mufflerModel.setRotationAngles(entitylivingbaseIn, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
-            IVertexBuilder ivertexbuilder = ItemRenderer.getBuffer(bufferIn, this.mufflerModel.getRenderType(resourcelocation), false, itemstack.hasEffect());
-            this.mufflerModel.render(matrixStackIn, ivertexbuilder, packedLightIn, OverlayTexture.NO_OVERLAY, 1.0F, 1.0F, 1.0F, 1.0F);
+            IVertexBuilder ivertexbuilder =
+                    ItemRenderer.getBuffer(bufferIn, this.mufflerModel.getRenderType(resourcelocation), false, itemstack.hasEffect());
+            this.mufflerModel.render(matrixStackIn, ivertexbuilder, packedLightIn, OverlayTexture.NO_OVERLAY,
+                    1.0F, 1.0F, 1.0F, 1.0F);
             matrixStackIn.pop();
         }
     }

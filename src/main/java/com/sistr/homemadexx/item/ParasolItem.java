@@ -19,14 +19,14 @@ public class ParasolItem extends ShieldItem {
                 .maxDamage(336)
                 .group(ModSetup.ITEM_GROUP));
         this.addPropertyOverride(new ResourceLocation("folding"), (stack, world, entity) ->
-                entity != null && entity.isShiftKeyDown() && !(entity.isHandActive() && entity.getActiveItemStack() == stack) ? 1.0F : 0.0F);
+                entity != null && entity.isSneaking() && !(entity.isHandActive() && entity.getActiveItemStack() == stack) ? 1.0F : 0.0F);
     }
 
     @Override
     public void inventoryTick(ItemStack stack, World worldIn, Entity entityIn, int itemSlot, boolean isSelected) {
         super.inventoryTick(stack, worldIn, entityIn, itemSlot, isSelected);
         if (entityIn != null) {
-            if (entityIn.isShiftKeyDown()) {
+            if (entityIn.isSneaking()) {
                 return;
             }
             if (entityIn instanceof LivingEntity) {

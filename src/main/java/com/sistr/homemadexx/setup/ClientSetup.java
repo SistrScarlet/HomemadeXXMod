@@ -12,7 +12,8 @@ public class ClientSetup {
 
     public static void init(final FMLClientSetupEvent event) {
         //レイヤーの追加
-        event.getMinecraftSupplier().get().getRenderManager().getSkinMap().forEach(((s, renderer) -> renderer.addLayer(new MufflerLayer<>((PlayerRenderer) renderer))));
+        event.getMinecraftSupplier().get().getRenderManager().getSkinMap().forEach(((s, renderer) ->
+                renderer.addLayer(new MufflerLayer<>((PlayerRenderer) renderer))));
 
     }
 
